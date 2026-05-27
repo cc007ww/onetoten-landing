@@ -79,79 +79,66 @@
     /* ===== Banner下方两个功能卡片 ===== */
     .feature-cards {
       display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+      max-width: 1400px; margin: 28px auto 0; padding: 0 40px;
     }
     .fc-card {
-      border-radius: 0; padding: 14px 20px;
-      display: flex; align-items: center; gap: 14px;
-      color: #fff;
+      border-radius: 0; padding: 18px 24px;
+      display: flex; align-items: center; gap: 0;
+      background: #fff; border: 1px solid #d5dae0;
+      color: #333; cursor: pointer;
     }
-    .fc-card.blue { background: linear-gradient(120deg, #1e6bdf 0%, #3b88f7 100%); }
-    .fc-card.teal { background: linear-gradient(120deg, #6366f1 0%, #8b5cf6 100%); }
-    .fc-icon {
-      width: 38px; height: 38px; background: rgba(255,255,255,.2);
-      border-radius: 0; display: flex; align-items: center; justify-content: center;
-      font-size: 18px; flex-shrink: 0;
-    }
-    .fc-card.teal .fc-icon { background: rgba(139,92,246,.25); }
     .fc-body { flex: 1; }
-    .fc-body h4 { font-size: 15px; font-weight: 700; margin-bottom: 3px; }
-    .fc-body p { font-size: 12px; opacity: .85; }
+    .fc-body h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; color: #1a1a2e; }
+    .fc-body p { font-size: 12px; color: #888; }
     .fc-body .fc-tag {
       display: inline-flex; align-items: center; gap: 4px;
-      background: rgba(255,255,255,.2); border-radius: 20px;
-      padding: 2px 10px; font-size: 11px; margin-top: 6px;
+      background: #f5f7fa; border-radius: 20px;
+      padding: 2px 10px; font-size: 11px; margin-top: 6px; color: #777;
     }
     .fc-body .fc-tag::before { content: "+"; font-weight: 700; }
     .fc-action {
       display: flex; align-items: center; gap: 4px;
-      font-size: 13px; white-space: nowrap; opacity: .9;
+      font-size: 13px; white-space: nowrap; color: #1a1a2e; font-weight: 700;
+      flex-shrink: 0; margin-left: 20px;
     }
+    .fc-card:hover { border-color: #b0bfce; }
+    .fc-card:hover .fc-action { color: #1a6fe8; }
 
     /* ===== 产品介绍模块 ===== */
     .prod-sec { padding: 64px 0 48px; }
     .prod-item {
       display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
-      align-items: center; margin-bottom: 60px;
+      align-items: stretch; margin-bottom: 60px;
     }
     .prod-item:last-child { margin-bottom: 0; }
-    /* 左图右文 */
-    .prod-item:nth-child(odd) .prod-img { order: -1; }
     .prod-img-box {
       width: 80%; aspect-ratio: 3 / 2;
       background: linear-gradient(135deg, #e8f0fb 0%, #d4e4f5 100%);
       display: flex; align-items: center; justify-content: center;
-      font-size: 18px; color: #8aa8cc; letter-spacing: 2px; font-weight: 600;
+      font-size: 15px; color: #8aa8cc; letter-spacing: 2px; font-weight: 500;
     }
-    .prod-info { padding: 0 12px; }
-    .prod-tag {
-      display: inline-block; font-size: 11px; font-weight: 700;
-      color: #1a6fe8; background: rgba(26,111,232,.08);
-      padding: 3px 12px; border-radius: 20px; margin-bottom: 14px;
-    }
+    .prod-info { padding: 0 8px; display: flex; flex-direction: column; justify-content: center; }
     .prod-info h3 {
-      font-size: 22px; font-weight: 700; color: #1a1a2e; margin-bottom: 16px; line-height: 1.35;
+      font-size: 18px; font-weight: 700; color: #1a1a2e;
+      margin: 0 0 14px; line-height: 1.4;
     }
-    .prod-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-    .prod-list li {
-      font-size: 14px; color: #444; padding-left: 18px;
-      position: relative; line-height: 1.65;
+    /* 功能文字行（纯文本，管道符分隔） */
+    .prod-feat-line {
+      font-size: 15px; color: #444; line-height: 2;
+      letter-spacing: 0.01em;
     }
-    .prod-list li::before {
-      content: ""; position: absolute; left: 0; top: 9px;
-      width: 5px; height: 5px; background: #1a6fe8;
+    .prod-feat-line + .prod-feat-line { margin-top: 0; }
+    /* 描述段 */
+    .prod-desc {
+      font-size: 14px; color: #555; line-height: 1.75;
+      border-left: 3px solid #1a6fe8; padding-left: 10px;
+      margin: 16px 0 0;
     }
-    .btn-prod-detail {
-      display: inline-block; padding: 9px 28px;
-      border: 1.5px solid #d0dde8; border-radius: 0;
-      font-size: 13px; color: #555; background: #fff;
-      transition: all .25s; cursor: pointer;
-    }
-    .btn-prod-detail:hover { border-color: #1a6fe8; color: #1a6fe8; }
 
     /* ===== 通用 section ===== */
     .sec { padding: 56px 0; }
     .sec-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
-    .sec-title { font-size: 22px; font-weight: 700; color: #1a1a2e; margin-bottom: 6px; }
+    .sec-title { font-size: 24px; font-weight: 700; color: #1a1a2e; margin-bottom: 6px; }
     .sec-sub { font-size: 13px; color: #888; margin-bottom: 36px; }
 
     /* ===== 修改2：同城代运营 — 成功案例卡片（无框线，上文字下图片） ===== */
@@ -182,7 +169,7 @@
     }
     .case-stats .cs .label svg { width: 12px; height: 12px; }
     .case-stats .cs .before { font-size: 12px; color: #999; text-decoration: line-through; }
-    .case-stats .cs .after { font-size: 16px; font-weight: 700; color: #1a6fe8; }
+    .case-stats .cs .after { font-size: 14px; font-weight: 700; color: #1a6fe8; }
     .case-growth { display: flex; gap: 20px; }
     .case-growth .cg { font-size: 12px; color: #1a6fe8; display: flex; align-items: center; gap: 3px; }
     .case-growth .cg::before { content: "↗"; }
@@ -641,97 +628,77 @@
   </div>
 </div><!-- /hero-wrap -->
 
+<!-- Banner下方两个功能卡片 -->
+<div class="feature-cards">
+  <div class="fc-card" onclick="openModal('geoModal')">
+    <div class="fc-body">
+      <h4>GEO诊断报告</h4>
+      <p>地域流量分析 · 精准定位目标受众</p>
+      <div class="fc-tag">审核通过企业账号季度免费1次</div>
+    </div>
+    <div class="fc-action">立即申请 →</div>
+  </div>
+  <div class="fc-card" onclick="openModal('brandModal')">
+    <div class="fc-body">
+      <h4>品牌声量诊断</h4>
+      <p>全网声量监测 · 洞察市场趋势</p>
+      <div class="fc-tag">审核通过企业账号季度免费1次</div>
+    </div>
+    <div class="fc-action">立即申请 →</div>
+  </div>
+</div>
+
 <!-- ========== 产品介绍模块 ========== -->
-<section class="prod-sec">
+<section class="prod-sec" id="products">
   <div class="sec-inner">
     <div class="sec-title">产品服务</div>
     <div class="sec-sub">四大核心产品，覆盖企业新媒体运营全链路</div>
 
-    <!-- 产品1：全平台矩阵管理（左图右文） -->
+    <!-- 产品1：多平台新媒体矩阵管理系统（左图右文） -->
     <div class="prod-item">
-      <div class="prod-img-box">BANNER 占位</div>
+      <div class="prod-img-box">配图</div>
       <div class="prod-info">
-        <span class="prod-tag">核心定位</span>
-        <h3>全平台矩阵管理</h3>
-        <ul class="prod-list">
-          <li>账号归一，管遍全平台</li>
-          <li>任务一键触达全员</li>
-          <li>数据自动，报表秒成</li>
-          <li>线索归流，变现无忧</li>
-        </ul>
-        <button class="btn-prod-detail">查看详情</button>
+        <h3>多平台新媒体矩阵管理系统</h3>
+        <p class="prod-feat-line">账号集中管理 | 数据自动监测 | 运营 AI 评估</p>
+        <p class="prod-feat-line">任务考核排名 | 风险 AI 检测 | 内容资产留存</p>
+        <p class="prod-desc">支持多平台账号统一管理，解决团队协作难、账号分散、数据统计繁琐的痛点。</p>
       </div>
     </div>
 
-    <!-- 产品2：品牌声量运营（左文右图） -->
+    <!-- 产品2：全平台新媒体声量监测系统（左文右图） -->
     <div class="prod-item">
       <div class="prod-info">
-        <span class="prod-tag">核心定位</span>
-        <h3>品牌声量运营</h3>
-        <ul class="prod-list">
-          <li>全网提及，一目了然</li>
-          <li>AI 洞察，读懂用户心</li>
-          <li>舆情预警，风险秒控</li>
-          <li>竞品动向，洞察先机</li>
-        </ul>
-        <button class="btn-prod-detail">查看详情</button>
+        <h3>全平台新媒体声量监测系统</h3>
+        <p class="prod-feat-line">看・品牌声量趋势 | 听・用户评论 AI 解读</p>
+        <p class="prod-feat-line">管・声誉正负舆情 | 比・行业洞察 AI 研判</p>
+        <p class="prod-desc">全网舆情监测与品牌口碑管理，实时掌握行业动态与竞品情报。</p>
       </div>
-      <div class="prod-img-box">BANNER 占位</div>
+      <div class="prod-img-box">配图</div>
     </div>
 
-    <!-- 产品3：达人投放管理（左图右文） -->
+    <!-- 产品3：AI营销搜索管理系统（左图右文） -->
     <div class="prod-item">
-      <div class="prod-img-box">BANNER 占位</div>
+      <div class="prod-img-box">配图</div>
       <div class="prod-info">
-        <span class="prod-tag">核心定位</span>
-        <h3>达人投放管理</h3>
-        <ul class="prod-list">
-          <li>AI 荐号，精准匹配</li>
-          <li>竞品打法，可视可学</li>
-          <li>投放全程，尽在掌控</li>
-          <li>结案一键，数据归仓</li>
-        </ul>
-        <button class="btn-prod-detail">查看详情</button>
+        <h3>AI 营销搜索（GEO）管理系统</h3>
+        <p class="prod-feat-line">抢占 AI 搜索决策起点 | 定位用户搜索意图</p>
+        <p class="prod-feat-line">持续 AI 正向声量管理 | 维护源头优质信源</p>
+        <p class="prod-desc">提供查询可见度能力</p>
+        <p class="prod-desc" style="margin-top:0;">全面查询品牌方能见度指数、信源占比分析、AI 态度倾向、行业排名等，为品牌方制定优化策略。</p>
       </div>
     </div>
 
-    <!-- 产品4：AI生态品牌监测（左文右图） -->
+    <!-- 产品4：新媒体营销投放数字化管理系统（左文右图） -->
     <div class="prod-item">
       <div class="prod-info">
-        <span class="prod-tag">核心定位</span>
-        <h3>AI 生态品牌监测</h3>
-        <ul class="prod-list">
-          <li>AI 提及，实时掌握</li>
-          <li>信息偏差，主动纠偏</li>
-          <li>用户痛点，精准挖掘</li>
-          <li>内容进AI，说服力更强</li>
-        </ul>
-        <button class="btn-prod-detail">查看详情</button>
+        <h3>新媒体营销投放数字化管理系统</h3>
+        <p class="prod-feat-line">AI 优化投放选号策略 | 跟踪复盘投放效果</p>
+        <p class="prod-feat-line">热点跟踪 AI 辅助创意 | 营销雷达分析竞品</p>
+        <p class="prod-desc">深度数据分析与资源对接平台，挖掘底层数据价值，辅助商业决策。</p>
       </div>
-      <div class="prod-img-box">BANNER 占位</div>
+      <div class="prod-img-box">配图</div>
     </div>
 
-    <!-- 诊断服务卡片 -->
-    <div class="feature-cards" style="margin-top:40px;">
-      <div class="fc-card blue" style="cursor:pointer;" onclick="openModal('geoModal')">
-        <div class="fc-icon">📊</div>
-        <div class="fc-body">
-          <h4>GEO诊断报告</h4>
-          <p>地域流量分析 · 精准定位目标受众</p>
-          <div class="fc-tag">审核通过企业账号季度免费1次</div>
-        </div>
-        <div class="fc-action">立即申请 &rarr;</div>
-      </div>
-      <div class="fc-card teal" style="cursor:pointer;" onclick="openModal('brandModal')">
-        <div class="fc-icon">📈</div>
-        <div class="fc-body">
-          <h4>品牌声量诊断</h4>
-          <p>全网声量监测 · 洞察市场趋势</p>
-          <div class="fc-tag">审核通过企业账号季度免费1次</div>
-        </div>
-        <div class="fc-action">立即申请 &rarr;</div>
-      </div>
-    </div>
 
   </div>
 </section>
@@ -888,7 +855,7 @@
           <li><span class="step-num">2</span>数据分析 · 效果优化 · 持续陪跑</li>
           <li><span class="step-num">3</span>1对1专家指导，全流程深度服务</li>
         </ul>
-        <button class="btn-more" onclick="openModal('serviceDetailModal')">更多代运营详情</button>
+        <button class="btn-more" onclick="openModal('agentApplyModal')">更多代运营详情</button>
       </div>
       <div class="success-card">
         <div class="sc-header">
@@ -1235,9 +1202,9 @@
       <div class="ft-col">
         <h4>关于</h4>
         <ul>
-          <li>关于我们</li>
-          <li>产品服务</li>
-          <li>合作伙伴</li>
+          <li onclick="document.getElementById('banner').scrollIntoView({behavior:'smooth'})">关于我们</li>
+          <li onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">产品服务</li>
+          <li onclick="document.getElementById('agent').scrollIntoView({behavior:'smooth'})">合作伙伴</li>
         </ul>
       </div>
       <!-- 联系我们 -->
