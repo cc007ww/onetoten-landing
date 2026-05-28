@@ -6,7 +6,7 @@
   <title>onetoten · 一站式企业新媒体服务商</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; color: #1a1a2e; background: #fff; min-width: 1024px; }
+    body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; color: #1a1a2e; background: #fff; }
     a { text-decoration: none; color: inherit; }
     button { cursor: pointer; border: none; outline: none; }
 
@@ -573,6 +573,172 @@
     .ft-bottom a { color: #5a7090; }
     .ft-bottom .ft-icp { display: flex; gap: 24px; align-items: center; }
     .ft-bottom .ft-icp span { display: flex; align-items: center; gap: 4px; }
+
+    /* ===== 平板端 (768px – 1024px) ===== */
+    @media (max-width: 1024px) {
+      .top-nav { padding: 0 24px; height: 56px; }
+      .nav-tagline { font-size: 12px; }
+      .nav-links { gap: 24px; }
+      .nav-links a { font-size: 13px; }
+
+      .hero-slider { height: 450px; }
+      .slide-placeholder .ph-title { font-size: 20px; }
+      .s-arrow { width: 36px; height: 36px; font-size: 18px; }
+
+      .feature-cards { padding: 0 24px; }
+      .fc-card { padding: 14px 18px; }
+
+      .prod-sec { padding: 48px 0 36px; }
+      .prod-item { gap: 36px; margin-bottom: 40px; }
+      .prod-info h3 { font-size: 17px; }
+      .prod-feat-line { font-size: 14px; }
+      .prod-desc { font-size: 13px; }
+
+      .sec { padding: 40px 0; }
+      .sec-inner { padding: 0 24px; }
+      .sec-title { font-size: 22px; }
+      .sec-sub { font-size: 12px; margin-bottom: 28px; }
+
+      .cases-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .case-name { font-size: 14px; }
+
+      .service-row { gap: 16px; }
+      .plan-card { padding: 20px 16px; }
+      .plan-card h3 { font-size: 15px; }
+      .success-card { padding: 20px; }
+      .success-card .sc-header h3 { font-size: 15px; }
+
+      .agent-box { padding: 20px; gap: 20px; }
+      .agent-box h3 { font-size: 14px; }
+
+      .events-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .ev-banner { height: 100px; }
+
+      .logo-grid { gap: 12px; }
+      .logo-box { width: 130px; height: 70px; font-size: 22px; }
+
+      .ft-awards-inner { padding: 0 24px; flex-wrap: wrap; gap: 12px; }
+      .ft-award-list { gap: 24px; flex-wrap: wrap; }
+      .ft-main-inner { padding: 0 24px; gap: 24px; }
+      .ft-bottom { padding: 14px 24px; flex-direction: column; gap: 8px; text-align: center; }
+      .ft-bottom .ft-icp { gap: 16px; flex-wrap: wrap; justify-content: center; }
+
+      .modal-box { width: 480px; padding: 28px 28px 0; }
+      .modal-promo { margin: 0 -28px; padding: 14px 28px; }
+      .modal-lg { width: 720px; }
+      .modal-lg-body { padding: 20px; }
+    }
+
+    /* ===== 移动端 (<768px) ===== */
+    @media (max-width: 767px) {
+      .top-nav {
+        padding: 0 14px; height: auto; min-height: 52px;
+        flex-wrap: wrap; gap: 6px; padding-top: 8px; padding-bottom: 8px;
+      }
+      .nav-brand { gap: 8px; }
+      .nav-brand img { height: 30px; }
+      .nav-tagline { font-size: 11px; }
+      .nav-links { width: 100%; gap: 0; justify-content: space-around; margin-left: 0; }
+      .nav-links a { font-size: 12px; padding: 4px 0; }
+
+      .hero-slider { height: 280px; }
+      .slide-placeholder .ph-title { font-size: 18px; }
+      .slide-placeholder .ph-sub { font-size: 12px; }
+      .s-arrow { width: 30px; height: 30px; font-size: 16px; }
+      .s-arrow.prev { left: 8px; }
+      .s-arrow.next { right: 8px; }
+      .s-dot { height: 6px; width: 6px; }
+      .s-dot.active { width: 16px; }
+      .hero-wrap { padding-bottom: 20px; }
+
+      .feature-cards { grid-template-columns: 1fr; gap: 10px; padding: 0 14px; margin-top: 20px; }
+      .fc-card { padding: 14px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+      .fc-action { margin-left: 0; font-size: 12px; }
+      .fc-body h4 { font-size: 14px; }
+
+      .prod-sec { padding: 36px 0 24px; }
+      .prod-item { grid-template-columns: 1fr; gap: 20px; margin-bottom: 32px; }
+      .prod-info { order: -1; }
+      .prod-info h3 { font-size: 16px; }
+      .prod-feat-line { font-size: 13px; line-height: 1.8; }
+      .prod-desc { font-size: 12px; }
+      .prod-img-box { width: 100%; }
+
+      .sec { padding: 32px 0; }
+      .sec-inner { padding: 0 14px; }
+      .sec-title { font-size: 20px; }
+      .sec-sub { font-size: 11px; margin-bottom: 22px; }
+
+      .cases-grid { grid-template-columns: 1fr; gap: 20px; }
+      .case-name { font-size: 14px; }
+      .case-img { height: 160px; }
+      .case-stats { gap: 12px; }
+      .case-stats .cs .after { font-size: 13px; }
+
+      .service-row { grid-template-columns: 1fr; gap: 16px; }
+      .plan-card { padding: 18px 14px; }
+      .plan-card h3 { font-size: 14px; }
+      .plan-steps li { font-size: 12px; padding: 10px 12px; }
+      .btn-more { font-size: 13px; padding: 11px; }
+      .success-card { padding: 18px; }
+      .success-card .sc-header h3 { font-size: 14px; }
+      .sc-video { min-height: 120px; }
+
+      .agent-box { grid-template-columns: 1fr; gap: 16px; padding: 16px; }
+      .agent-box h3 { font-size: 14px; }
+      .map-svg-wrap { min-height: 220px; }
+      .agent-item { padding: 10px 0; }
+      .ai-info h4 { font-size: 13px; }
+      .btn-agent { font-size: 13px; padding: 11px; }
+
+      .events-grid { grid-template-columns: 1fr; gap: 14px; }
+      .ev-banner { height: 90px; }
+      .ev-body h4 { font-size: 13px; }
+      .btn-more-events { font-size: 13px; padding: 10px 30px; }
+
+      .logo-grid { gap: 10px; }
+      .logo-box { width: 100px; height: 60px; font-size: 18px; }
+      .logo-box .lb-sub { font-size: 10px; }
+
+      .modal-overlay { padding: 10px; align-items: flex-start; }
+      .modal-overlay.active { align-items: flex-start; padding-top: 40px; }
+      .modal-box { width: 100%; max-width: 100%; padding: 24px 20px 0; }
+      .modal-promo { margin: 0 -20px; padding: 12px 20px; }
+      .modal-title { font-size: 17px; }
+      .modal-features { grid-template-columns: 1fr; gap: 8px; }
+      .modal-qr-box { width: 140px; height: 140px; }
+
+      .modal-lg-overlay { padding: 0; }
+      .modal-lg { width: 100%; max-width: 100%; }
+      .modal-lg-head { padding: 14px 18px; }
+      .modal-lg-head h2 { font-size: 16px; }
+      .modal-lg-body { padding: 16px; overflow-x: auto; }
+      .svc-section-title { font-size: 14px; }
+      .svc-table { font-size: 11px; }
+      .svc-table th, .svc-table td { padding: 6px 8px; }
+      .pkg-table { font-size: 10px; }
+      .pkg-table th, .pkg-table td { padding: 5px 6px; }
+      .ip-table { font-size: 10px; }
+      .ip-table th, .ip-table td { padding: 5px 6px; }
+      .btn-contact-partner { font-size: 13px; padding: 10px 28px; }
+      .partner-card { padding: 18px; }
+      .partner-card h3 { font-size: 14px; }
+
+      .contact-sub-box { width: 100%; max-width: 100%; padding: 24px 20px; }
+      .contact-sub-box h3 { font-size: 15px; }
+      .csub-qr { width: 150px; height: 150px; }
+
+      footer { padding-top: 0; }
+      .ft-awards-inner { padding: 0 14px; flex-direction: column; text-align: center; gap: 10px; }
+      .ft-award-list { gap: 16px; justify-content: center; }
+      .ft-award { text-align: center; }
+      .ft-main { padding: 24px 0; }
+      .ft-main-inner { grid-template-columns: 1fr; gap: 20px; padding: 0 14px; }
+      .ft-qr-row { grid-template-columns: repeat(4, 1fr); }
+      .ft-bottom { padding: 12px 14px; flex-direction: column; gap: 8px; text-align: center; }
+      .ft-bottom .ft-icp { gap: 12px; flex-wrap: wrap; justify-content: center; font-size: 10px; }
+      .ft-bottom { font-size: 10px; }
+    }
   </style>
 </head>
 <body>
